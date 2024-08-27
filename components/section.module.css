@@ -1,0 +1,136 @@
+.williams20logo3transparentIcon {
+  height: 50.7px;
+  width: 50.7px;
+  position: relative;
+  object-fit: cover;
+}
+.byWilliamsLogging {
+  text-decoration: none;
+  position: relative;
+  line-height: 32px;
+  font-weight: 700;
+  color: inherit;
+}
+.williams20logo3transparentParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.j6jituykxfesdIcon {
+  height: 417.4px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
+}
+.ornament {
+  width: 612px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.welcomeTo {
+  margin: 0;
+}
+.welcomeToWilliams,
+.welcomeToWilliamsContainer {
+  align-self: stretch;
+  position: relative;
+  line-height: 60px;
+}
+.welcomeToWilliams {
+  line-height: 26px;
+}
+.text,
+.welcomeToWilliamsLoggingParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text {
+  align-self: stretch;
+  text-align: justify;
+  font-size: var(--font-size-base-8);
+  color: var(--color-gray-100);
+  font-family: var(--font-inter);
+}
+.welcomeToWilliamsLoggingParent {
+  flex: 1;
+  gap: var(--gap-18xl);
+  min-width: 335px;
+  max-width: 100%;
+}
+.ornamentParent,
+.section2,
+.section2Inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.ornamentParent {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 64px 62px;
+}
+.section2,
+.section2Inner {
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.section2Inner {
+  width: 1360px;
+  justify-content: center;
+  font-size: var(--font-size-45xl);
+  color: var(--dark-blue);
+  font-family: var(--font-dm-sans);
+}
+.section2 {
+  align-self: stretch;
+  background-color: var(--color-white);
+  overflow: hidden;
+  justify-content: flex-end;
+  padding: var(--padding-xl) var(--padding-21xl) var(--padding-lgi-9);
+  box-sizing: border-box;
+  min-height: 508px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1050px) {
+  .welcomeToWilliamsContainer {
+    font-size: var(--font-size-32xl);
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .welcomeToWilliamsLoggingParent {
+    gap: var(--gap-lg);
+  }
+  .ornamentParent {
+    gap: var(--gap-12xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .byWilliamsLogging {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
+  .welcomeToWilliamsContainer {
+    font-size: var(--font-size-19xl);
+    line-height: 36px;
+  }
+  .ornamentParent {
+    gap: var(--gap-mini);
+  }
+}
