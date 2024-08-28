@@ -49,18 +49,12 @@ const Header1: NextPage<Header1Type> = ({
   }, []);
 
   const onServicesTextClick = useCallback(() => {
-    const anchor = document.querySelector("[data-scroll-to='services']");
+    const anchor = document.querySelector("[data-scroll-to='service']");
     if (anchor) {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
   }, []);
 
-  const onProjectsTextClick = useCallback(() => {
-    const anchor = document.querySelector("[data-scroll-to='projects']");
-    if (anchor) {
-      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
-  }, []);
 
   const onWaterTextClick = useCallback(() => {
     router.push("https://williams-plumbing-solutions.vercel.app/water-treatment");
@@ -123,14 +117,6 @@ const Header1: NextPage<Header1Type> = ({
         >
           <div
             className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
-            onClick={onHomeClick}
-          >
-            <a className="relative leading-[26px] text-[inherit] inline-block">
-              Home
-            </a>
-          </div>
-          <div
-            className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
             onClick={onTAGHdLinkNormalContainerClick}
           >
             <a className="relative leading-[26px] text-[inherit] inline-block">
@@ -143,14 +129,6 @@ const Header1: NextPage<Header1Type> = ({
               onClick={onServicesTextClick}
             >
               Services
-            </a>
-          </div>
-          <div className="flex flex-row items-center justify-center py-[7px] px-[15px] box-border font-bold text-black">
-            <a
-              className="relative leading-[26px] text-[inherit] inline-block cursor-pointer"
-              onClick={onProjectsTextClick}
-            >
-              Projects
             </a>
           </div>
           <div className="relative">

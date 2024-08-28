@@ -29,13 +29,7 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
       <div className="w-[1360px] flex flex-row items-start justify-center flex-wrap content-start max-w-full text-45xl text-dark-blue font-dm-sans">
         <div className="flex-1 flex flex-row items-center justify-center flex-wrap content-center gap-x-16 gap-y-[62px] max-w-full mq750:gap-[31px] mq450:gap-[15px]">
           <div className="w-[612px] flex flex-row items-center justify-start max-w-full">
-            <img
-              className="h-[417.4px] flex-1 relative max-w-full overflow-hidden object-cover cursor-pointer"
-              loading="lazy"
-              alt=""
-              src="/j6jituykxfesd@2x.png"
-              onClick={onJ6jItUyKXfEsdImageClick}
-            />
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/j6jItUyKXfE?si=4ClOL6bS5e75krlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div className="flex-1 flex flex-col items-start justify-start gap-[37px] min-w-[335px] max-w-full mq750:gap-[18px]">
             <b className="self-stretch relative leading-[60px] mq450:text-19xl mq450:leading-[36px] mq1050:text-32xl mq1050:leading-[48px]">
@@ -43,7 +37,7 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
               <p className="m-0">WILLIAMS LOGGING</p>
             </b>
             <div className="self-stretch flex flex-col items-start justify-start text-justify text-base-8 text-gray font-inter">
-              <div className="self-stretch relative leading-[26px]">
+              <div className="self-stretch relative leading-[26px]" data-scroll-to="about">
                 Welcome to Williams Logging, where we blend traditional logging
                 expertise with cutting-edge technology to deliver exceptional
                 service. Our commitment to innovation and precision ensures that

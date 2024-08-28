@@ -42,8 +42,11 @@ const Footer1: NextPage<Footer1Type> = ({
   }, []);
 
   const onServiesTextClick = useCallback(() => {
-    router.push("/services");
-  }, [router]);
+    const anchor = document.querySelector("[data-scroll-to='service']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
 
   const onProjectsTextClick = useCallback(() => {
     router.push("/project-gallery");
@@ -54,8 +57,11 @@ const Footer1: NextPage<Footer1Type> = ({
   }, [router]);
 
   const onAboutUsTextClick = useCallback(() => {
-    router.push("/about-us");
-  }, [router]);
+    const anchor = document.querySelector("[data-scroll-to='about']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
 
   const onContactUsTextClick = useCallback(() => {
     router.push("https://getjobber.com/");
@@ -163,12 +169,6 @@ const Footer1: NextPage<Footer1Type> = ({
         </div>
         <div className="flex flex-col items-start justify-start gap-[14px] min-w-[122px]">
           <div
-            className="flex flex-row items-center justify-center cursor-pointer"
-            onClick={onHomeClick}
-          >
-            Home
-          </div>
-          <div
             className="self-stretch relative leading-[150%] font-medium cursor-pointer"
             onClick={onAboutUsTextClick}
           >
@@ -179,12 +179,6 @@ const Footer1: NextPage<Footer1Type> = ({
             onClick={onServiesTextClick}
           >
             Service
-          </div>
-          <div
-            className="self-stretch relative leading-[150%] font-medium cursor-pointer"
-            onClick={onProjectsTextClick}
-          >
-            Projects
           </div>
           <div
             className="self-stretch relative leading-[150%] font-medium cursor-pointer"

@@ -73,7 +73,7 @@ const WillaimsLogging: NextPage = () => {
         <div className="flex-1 flex flex-row items-start justify-center flex-wrap content-start max-w-full">
           <div className="flex-1 flex flex-col items-center justify-center gap-6 max-w-full">
             <div className="self-stretch flex flex-col items-center justify-start gap-[37px] max-w-full mq750:gap-[18px]">
-              <b className="self-stretch relative leading-[60px] mq450:text-19xl mq450:leading-[36px] mq1050:text-32xl mq1050:leading-[48px]">
+              <b className="self-stretch relative leading-[60px] mq450:text-19xl mq450:leading-[36px] mq1050:text-32xl mq1050:leading-[48px]" data-scroll-to="service">
                 Services
               </b>
               <div className="w-[856px] flex flex-col items-start justify-start max-w-full text-base-8 text-gray font-inter">
