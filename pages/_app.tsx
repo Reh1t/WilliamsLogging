@@ -8,6 +8,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Fragment>
       <Head>
         <title>Logging</title>
+        <link rel="icon" href="/tag-hd-logo@2x.png" />
+        
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
