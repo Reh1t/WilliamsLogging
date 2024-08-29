@@ -9,6 +9,11 @@ module.exports = {
     extend: {
       colors: {
         white: "#fff",
+        ghostwhite: "#f3f5fc",
+        whitesmoke: {
+          100: "#f5f6f8",
+          200: "#f5f6f7",
+        },
         gray: {
           DEFAULT: "rgba(21, 40, 61, 0.7)", // from first file
           100: "#939393",                  // from second file
@@ -25,10 +30,8 @@ module.exports = {
           DEFAULT: "#000",                 // from first file
           1: "#0b0a04",                    // from second file
         },
-        whitesmoke: {
-          100: "#f5f6f8",
-          200: "#f5f6f7",
-        },
+        lavender: "#d0dbff",
+        tan: "#bdb499",
         darkslategray: {
           100: "#454545",
           200: "#333",
@@ -77,6 +80,9 @@ module.exports = {
         "form-field": "'DM Sans'",          // from second file
         "header-1": "'Work Sans'",          // from second file
         "m3-title-medium": "Roboto",        // from second file
+        "heading-1": "'DM Sans'",           // from second file
+        "work-sans": "'Work Sans'",         // from second file
+        "body-body-2-30-space": "Inter",    // from second file
       },
       borderRadius: {
         xl: "20px",
@@ -87,6 +93,7 @@ module.exports = {
         mid: "17px",
         "17xl": "36px",
         "radius-200": "8px",
+        "11xl": "30px", // additional from the second file
       },
     },
     fontSize: {
@@ -111,7 +118,10 @@ module.exports = {
       "53xl": "72px",
       "39xl": "58px",
       "24xl": "43px",
-      inherit: "inherit",
+      "37xl": "56px", // additional from the second file
+      "25xl": "44px", // additional from the second file
+      "16xl": "35px", // additional from the second file
+      "29xl": "48px", // additional from the second file
     },
     screens: {
       lg: {

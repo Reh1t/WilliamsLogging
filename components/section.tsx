@@ -22,7 +22,7 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
           src="/williams20logo3transparent20bgroundpng@2x.png"
         />
         <a className="[text-decoration:none] relative leading-[32px] font-bold text-[inherit] mq450:text-base mq450:leading-[26px]">
-          by Williams Logging
+        by Williams Solutions.Pro
         </a>
       </div>
       <div className="w-[1360px] flex flex-row items-start justify-center flex-wrap content-start max-w-full text-45xl text-dark-blue font-dm-sans">
