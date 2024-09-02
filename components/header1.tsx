@@ -60,6 +60,10 @@ const Header1: NextPage<Header1Type> = ({
     router.push("https://williams-plumbing-solutions.vercel.app/water-treatment");
   }, [router]);
 
+  const onBlogButtonClick = useCallback(() => {
+    router.push("https://blog-delta-three-74.vercel.app/");
+  }, [router]);
+
   const onContactButtonClick = useCallback(() => {
     router.push("https://getjobber.com/");
   }, [router]);
@@ -178,7 +182,9 @@ const Header1: NextPage<Header1Type> = ({
             </div>
           </div>
           <div className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer">
-            <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer">
+            <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+          onClick={onBlogButtonClick}
+            >
               Blog
             </a>
           </div>
