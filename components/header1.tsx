@@ -55,9 +55,10 @@ const Header1: NextPage<Header1Type> = ({
     }
   }, []);
 
-
   const onWaterTextClick = useCallback(() => {
-    router.push("https://williams-plumbing-solutions.vercel.app/water-treatment");
+    router.push(
+      "https://williams-plumbing-solutions.vercel.app/water-treatment"
+    );
   }, [router]);
 
   const onBlogButtonClick = useCallback(() => {
@@ -80,10 +81,19 @@ const Header1: NextPage<Header1Type> = ({
     router.push("https://williamslogging.vercel.app/");
   }, [router]);
 
-
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   let closeTimeout: NodeJS.Timeout;
 
+  const handleMenuClick = () => {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+
+  // Update the `openMenu` and `closeMenu` functions to handle both the hamburger and dropdown menus
   const openMenu = () => {
     clearTimeout(closeTimeout);
     setIsOpen(true);
@@ -92,7 +102,22 @@ const Header1: NextPage<Header1Type> = ({
   const closeMenu = () => {
     closeTimeout = setTimeout(() => {
       setIsOpen(false);
-    }, 200); // Adjust the delay as needed
+    }, 200);
+  };
+  // Add new functions to handle the dropdown menu on small screens
+  const handleDropdownClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const openDropdown = () => {
+    clearTimeout(closeTimeout);
+    setIsDropdownOpen(true);
+  };
+
+  const closeDropdown = () => {
+    closeTimeout = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 200);
   };
 
   return (
@@ -109,7 +134,10 @@ const Header1: NextPage<Header1Type> = ({
             src="/williams20logo3transparent20bgroundpng@2x.png"
             onClick={onSolutionClick}
           />
-          <b className="relative leading-[32px] mq450:text-base mq450:leading-[26px] cursor-pointer" onClick={onSolutionClick}>
+          <b
+            className="relative leading-[32px] mq450:text-base mq450:leading-[26px] cursor-pointer"
+            onClick={onSolutionClick}
+          >
             Williams Solutions.Pro
           </b>
         </div>
@@ -135,23 +163,30 @@ const Header1: NextPage<Header1Type> = ({
               Services
             </a>
           </div>
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={!isOpen ? openDropdown : undefined}
+            onMouseLeave={!isOpen ? closeDropdown : undefined}
+          >
             <div
               className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
-              onMouseEnter={openMenu}
-              onMouseLeave={closeMenu}
+              onClick={isOpen ? handleDropdownClick : undefined} // Toggle dropdown on click for small screens
             >
               <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px]">
                 Williams Services
-                <img className="relative w-3 h-3 ml-3" src="/down-arrow.png" alt="dwon arrrow" />
+                <img
+                  className="relative w-3 h-3 ml-3"
+                  src="/down-arrow.png"
+                  alt="down arrow"
+                />
               </a>
             </div>
             <div
               className={`absolute top-full left-0 bg-white shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-lg z-10 ${
-                isOpen ? "block" : "hidden"
+                isDropdownOpen ? "block" : "hidden"
               }`}
-              onMouseEnter={openMenu}
-              onMouseLeave={closeMenu}
+              onMouseEnter={!isOpen ? openDropdown : undefined}
+              onMouseLeave={!isOpen ? closeDropdown : undefined}
             >
               <div className="flex flex-col items-start justify-start py-2 px-4 gap-[8px]">
                 <a
@@ -172,18 +207,25 @@ const Header1: NextPage<Header1Type> = ({
                 >
                   Septic
                 </a>
-                <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer" onClick={onExcavationButtonClick}>
+                <a
+                  className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+                  onClick={onExcavationButtonClick}
+                >
                   Excavation
                 </a>
-                <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer" onClick={onLoggingButtonClick}>
+                <a
+                  className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+                  onClick={onLoggingButtonClick}
+                >
                   Logging
                 </a>
               </div>
             </div>
           </div>
           <div className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer">
-            <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
-          onClick={onBlogButtonClick}
+            <a
+              className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+              onClick={onBlogButtonClick}
             >
               Blog
             </a>
@@ -199,7 +241,7 @@ const Header1: NextPage<Header1Type> = ({
         </nav>
         <button
           className="hidden lg:block text-black bg-transparent"
-          onClick={openMenu}
+          onClick={handleMenuClick}
         >
           <svg
             className="w-6 h-6"
@@ -231,11 +273,11 @@ const Header1: NextPage<Header1Type> = ({
               WILLIAMS
             </h1>
           </div>
-          <div className="w-auto mr-10 flex flex-col items-start justify-start text-10xl font-normal font-ledger mq1050:text-19xl mq825:text-7xl">
-            <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit  mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
+          <div className="w-auto mr-10 flex flex-col items-start justify-start text-10xl font-normal font-ledger mq1050:text-7xl mq825:text-lgi">
+            <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit  mq450:text-lgi mq450:leading-[21px]">
               {name1}
             </h1>
-            <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
+            <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit mq450:text-lgi mq450:leading-[21px]">
               {name2}
             </h1>
           </div>
