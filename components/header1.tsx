@@ -17,8 +17,8 @@ const Header1: NextPage<Header1Type> = ({
   className = "",
   navHEADERAlignSelf,
   navHEADERFlex,
-  name1 = "Logging",
-  name2 = "Services",
+  name1 = "A.R",
+  name2 = "Logging",
 }) => {
   const tAGHeaderStyle: CSSProperties = useMemo(() => {
     return {
@@ -265,10 +265,10 @@ const Header1: NextPage<Header1Type> = ({
         <div className="w-[1280px] flex flex-row items-center justify-between max-w-full gap-[20px] mq450:gap-0 mq450::flex-wrap">
           <div className="w-[543px] ml-10  flex flex-row items-center justify-start gap-[86px] max-w-full mq450:ml-0 mq825:gap-[43px] mq450:gap-[21px]">
             <img
-              className="h-32 w-36 mq675:h-14 mq675:w-16 relative object-cover"
+              className="h-32 mq675:h-14 mq675:w-16 relative object-cover"
               loading="lazy"
               alt=""
-              src="/tag-hd-logo@2x.png"
+              src="/LogoLogging.svg"
             />
             <h1 className="m-0 flex-1 relative text-[100px] tracking-[-0.1em] leading-[53px] font-normal font-ledger inline-block min-w-[213px] max-w-full lg:text-53xl mq1050:text-32xl mq825:text-19xl mq825:leading-[42px] mq450:text-10xl mq450:leading-[32px]">
               WILLIAMS

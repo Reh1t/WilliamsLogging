@@ -26,7 +26,7 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
         </a>
       </div>
       <div className="w-[1360px] flex flex-row items-start justify-center flex-wrap content-start max-w-full text-45xl text-dark-blue font-dm-sans">
-        <div className="flex-1 flex flex-row items-center justify-center flex-wrap content-center gap-x-16 gap-y-[62px] max-w-full mq750:gap-[31px] mq450:gap-[15px]">
+        <div className="flex-1 flex flex-row items-center justify-center flex-wrap content-center gap-x-0 gap-y-[62px] max-w-full mq750:gap-[31px] mq450:gap-[15px]">
           <div className="w-[612px] flex flex-row items-center justify-start max-w-full">
             <iframe
               width="560"
@@ -42,7 +42,7 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
           <div className="flex-1 flex flex-col items-start justify-start gap-[37px] min-w-[335px] max-w-full mq750:gap-[18px]">
             <b className="self-stretch relative leading-[60px] mq450:text-19xl mq450:leading-[36px] mq1050:text-32xl mq1050:leading-[48px]">
               <p className="m-0">{`Welcome to `}</p>
-              <p className="m-0">WILLIAMS LOGGING</p>
+              <p className="m-0">WILLIAMS A.R LOGGING</p>
             </b>
             <div className="self-stretch flex flex-col items-start justify-start text-justify text-base-8 text-gray font-inter">
               <div
